@@ -50,3 +50,28 @@ var posts = db.addCollection('posts');
   var posts = require('../db/config').posts;
 ```
 * Access/manage the collection with the `find`, `insert`, `findAndUpdate`, and `findAndRemove`
+
+## How do I set up router files?
+* Create `routes` folder in the main directory.
+* Create a file for the resource that you want to CRUD. Example: `posts.js`
+* Include these at the top of your file:
+```
+  var express = require('express');
+  var router = express.Router();
+```
+* Create routes with prefix `router`, not `app`. If you want to send JSON back to the user, then use `res.send(someJSON)`. However, if you want to render an EJS page, then use `res.render('someFileName')`. Example:
+```
+  router.get('/', function (req, res) {
+    res.render('index');
+  });
+```
+* Export `router`. Example:
+```
+  module.exports = router;
+```
+* In `server.js`, require/import the routes files and assign them to their respective URLs. Example:
+```
+  var postsRoutes = require('./routes/posts');
+
+  app.use('/posts', postsRoutes);
+```
