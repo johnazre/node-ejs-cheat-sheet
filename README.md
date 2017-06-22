@@ -1,6 +1,9 @@
 # node-express-ejs-cheat-sheet
 
-## How do I get an express server up and running?
+### Index
+* [How do I get an express server up and running?](#express)
+
+<h2 id="express">How do I get an express server up and running?</h2>
 * Create a directory & cd into directory
 * run `touch server.js` & `npm init -y`
 * run `npm install --save express cors body-parser`
@@ -26,6 +29,7 @@ app.set('view engine', 'ejs');
 ```
 
 ## How do I set up LokiJS?
+* Run `npm install --save lokijs`
 * Create a folder called `db` in the main directory.
 * Create a file within the `db` folder called `config.js`.
 * Import Loki and create an instantiation of it:
