@@ -2,6 +2,9 @@
 
 ### Index
 * [How do I get an express server up and running?](#express)
+* [How do I get EJS up and running?](#ejs)
+* [How do I set up LokiJS?](#lokijs)
+* [How do I set up router files?](#router)
 
 <h2 id="express">How do I get an express server up and running?</h2>
 * Create a directory & cd into directory
@@ -12,7 +15,7 @@
 * Fill in any of the urls that you would like to use or just delete all of the `app.get`, `app.post`, `app.patch`, and `app.delete`
 * To run the server, run the command `nodemon server.js`
 
-## How do I get EJS up and running?
+<h2 id="ejs">How do I get EJS up and running?</h2>
 * Run `npm install --save ejs`
 * Create a folder in the main directory called `views`
 * Create a file inside of the `views` folder called `index.ejs` and put some boilerplate of your choice in there to make sure that it will work
@@ -28,7 +31,7 @@ app.set('view engine', 'ejs');
   })
 ```
 
-## How do I set up LokiJS?
+<h2 id="lokijs">How do I set up LokiJS?</h2>
 * Run `npm install --save lokijs`
 * Create a folder called `db` in the main directory.
 * Create a file within the `db` folder called `config.js`.
@@ -55,7 +58,7 @@ var posts = db.addCollection('posts');
 ```
 * Access/manage the collection with the `find`, `insert`, `findAndUpdate`, and `findAndRemove`
 
-## How do I set up router files?
+<h2 id="router">How do I set up router files?</h2>
 * Create `routes` folder in the main directory.
 * Create a file for the resource that you want to CRUD. Example: `posts.js`
 * Include these at the top of your file:
